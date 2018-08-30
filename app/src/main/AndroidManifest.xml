@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mbass.android.pushsample">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.nifcloud.mbaas.core.NCMBDialogActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:noHistory="true">
+        </activity>
+
+        <service
+            android:name=".MyCustomService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <!-- プッシュ通知タップ時に起動するActivityの設定 -->
+        <meta-data android:name="openPushStartActivity" android:value=".MainActivity"/>
+
+        <!-- 通知エリアに表示されるアイコンの設定 -->
+        <meta-data android:name="smallIcon" android:resource="@drawable/ic_launcher_background"/>
+
+        <!-- 通知エリアに表示されるアイコンカラーの設定 -->
+        <meta-data android:name="smallIconColor" android:value="@color/colorPrimary"/>
+
+        <!-- 通知エリアにプッシュ通知を複数表示する設定　0:最新のみ表示 , 1:複数表示 -->
+        <meta-data android:name="notificationOverlap" android:value="0"/>
+
+        <!-- カスタムダイアログプッシュを利用する場合のみ背景画像の設定 -->
+        <meta-data android:name="dialogPushBackgroundImage" android:resource="@drawable/ic_launcher_foreground"/>
+
+    </application>
+
+</manifest>
