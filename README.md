@@ -18,25 +18,21 @@ Note: For details, please see [here](https://mbaas.nifcloud.com/price.htm)
 ## Steps
 1. Import project into Android Studio
 
-2. Config Compile SDK and Build Tools Version
+2. Connect Firebase ( [Menu] Tools->Firebase->Cloud Message->Setup Firebase Cloud Message)
 
-![ProjectStructure](/readme-img/004.png)
-
-3. Connect Firebase ( [Menu] Tools->Firebase->Cloud Message->Setup Firebase Cloud Message)
-
-* 3.1 Open Firebase in Assistant 
+* 2.1 Open Firebase in Assistant 
 
 ![Setup](/readme-img/005.png)
 
-* 3.2 Connect to your Firebase
+* 2.2 Connect to your Firebase
 
 ![Connect](/readme-img/006.png)
 
-* 3.2 Confirm status and google-services.json file
+* 2.2 Confirm status and google-services.json file
 
 ![Confirm](/readme-img/007.png)
 
-4. Config on Nifcloud Console(https://console.mbaas.nifcloud.com)
+3. Config on Nifcloud Console(https://console.mbaas.nifcloud.com)
 
 ![Config](/readme-img/008.png)
 
