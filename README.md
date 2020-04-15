@@ -14,6 +14,7 @@ Note: For details, please see [here](https://mbaas.nifcloud.com/price.htm)
 
 ## Required
 * Android Stuio 3.x
+* Minimum Android SDK: 14
 
 ## Steps
 1. Import project into Android Studio
